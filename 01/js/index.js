@@ -18,14 +18,14 @@
             }
         ];
 
-        $('#inputTable').bootstrapTable({
-            columns: columnList,
-            data: getInputList()
-        });
-
         $('#outputTable').bootstrapTable({
             columns: columnList,
             data: getOutputList()
+        });
+
+        $('#inputTable').bootstrapTable({
+            columns: columnList,
+            data: getInputList()
         });
 
         $('#calcTable').bootstrapTable({
@@ -39,7 +39,7 @@
         });
     });
 
-    function getInputList() {
+    function getOutputList() {
 
         var ex1 = moment();
         var ex2 = moment().toDate();
@@ -84,7 +84,7 @@
         return resultList;
     }
 
-    function getOutputList() {
+    function getInputList() {
 
         var ex1 = moment('2018-12-25T01:30:00.123Z').format();
         var ex2 = moment('2018-12-25', 'YYYY-MM-DD').format();
